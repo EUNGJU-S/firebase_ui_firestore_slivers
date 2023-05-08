@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_ui_firestore/firebase_ui_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 typedef FirestoreEmptyBuilder = Widget Function(BuildContext context);
