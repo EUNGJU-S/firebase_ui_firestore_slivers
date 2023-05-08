@@ -1,6 +1,6 @@
 name: firebase_ui_firestore_slivers
-description: A new Flutter project.
-version: 0.0.1
+description: Sliver version of the firebase_ui_firestore
+version: 1.0.0
 homepage:
 
 environment:
