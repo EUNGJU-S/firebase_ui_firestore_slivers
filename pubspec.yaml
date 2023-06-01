@@ -1,7 +1,7 @@
 name: firebase_ui_firestore_slivers
 description: Sliver version of the firebase_ui_firestore
 version: 1.0.0
-homepage:
+homepage: https://github.com/mohyghb/firebase_ui_firestore_slivers
 
 environment:
   sdk: '>=2.19.6 <3.0.0'

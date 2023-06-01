@@ -2,12 +2,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_ui_firestore/firebase_ui_firestore.dart';
 import 'package:flutter/material.dart';
 
-typedef FirestoreEmptyBuilder = Widget Function(BuildContext context);
+import 'firestore_sliver_list_view.dart';
 
-int kDefaultSemanticIndexCallback(Widget _, int localIndex) => localIndex;
-
-/// Sliver version of the [FirestoreListView]
-class FirestoreSliverListView<T> extends StatelessWidget {
+/// Sliver Grid version of the [FirestoreListView]
+class FirestoreSliverGridView<T> extends StatelessWidget {
+  final SliverGridDelegate gridDelegate;
   final Query<T> query;
   final FirestoreItemBuilder<T> itemBuilder;
   final FirestoreLoadingBuilder? loadingBuilder;
@@ -21,10 +20,11 @@ class FirestoreSliverListView<T> extends StatelessWidget {
   final ChildIndexGetter? findChildIndexCallback;
   final int pageSize;
 
-  const FirestoreSliverListView({
+  const FirestoreSliverGridView({
     super.key,
     required this.query,
     required this.itemBuilder,
+    required this.gridDelegate,
     this.loadingBuilder,
     this.errorBuilder,
     this.emptyBuilder,
@@ -49,7 +49,7 @@ class FirestoreSliverListView<T> extends StatelessWidget {
 
         if (snapshot.hasError) {
           return errorBuilder?.call(context, snapshot.error ?? '',
-                  snapshot.stackTrace ?? StackTrace.empty) ??
+              snapshot.stackTrace ?? StackTrace.empty) ??
               const SliverToBoxAdapter();
         }
 
@@ -57,9 +57,10 @@ class FirestoreSliverListView<T> extends StatelessWidget {
           return emptyBuilder?.call(context) ?? const SliverToBoxAdapter();
         }
 
-        return SliverList(
+        return SliverGrid(
+          gridDelegate: gridDelegate,
           delegate: SliverChildBuilderDelegate(
-            (context, index) {
+                (context, index) {
               if (snapshot.hasMore && index + 1 == snapshot.docs.length) {
                 // Tell FirestoreQueryBuilder to try to obtain more items.
                 // It is safe to call this function from within the build method.
