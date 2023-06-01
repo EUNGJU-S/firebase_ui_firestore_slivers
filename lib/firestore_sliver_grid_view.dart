@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'firestore_sliver_list_view.dart';
 
-/// Sliver version of the [FirestoreListView]
+/// Sliver Grid version of the [FirestoreListView]
 class FirestoreSliverGridView<T> extends StatelessWidget {
   final SliverGridDelegate gridDelegate;
   final Query<T> query;
