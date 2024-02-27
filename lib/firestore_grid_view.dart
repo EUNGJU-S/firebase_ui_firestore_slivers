@@ -42,7 +42,6 @@ class FirestoreGridView<T> extends StatelessWidget {
     this.errorBuilder,
     this.emptyBuilder,
     this.pageSize = 10,
-
     this.scrollDirection = Axis.vertical,
     this.reverse = false,
     this.controller,

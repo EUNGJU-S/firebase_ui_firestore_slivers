@@ -1,3 +1,7 @@
+## 2.1.0
+* Upgraded dependencies
+* Updated to dart 3
+
 ## 2.0.0
 * Added support for GridView
 * Added support for SliverGrid
