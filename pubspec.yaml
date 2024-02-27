@@ -1,23 +1,23 @@
 name: firebase_ui_firestore_slivers
 description: Expanded functionalities of firebase_ui_firestore (slivers + grids supported)
-version: 2.0.0
+version: 2.1.0
 homepage: https://github.com/mohyghb/firebase_ui_firestore_slivers
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: '>=3.0.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  firebase_ui_firestore: ^1.4.0
-  cloud_firestore: ^4.6.0
+  firebase_ui_firestore: ^1.6.2
+  cloud_firestore: ^4.15.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

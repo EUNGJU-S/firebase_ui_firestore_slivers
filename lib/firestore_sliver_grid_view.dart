@@ -49,7 +49,7 @@ class FirestoreSliverGridView<T> extends StatelessWidget {
 
         if (snapshot.hasError) {
           return errorBuilder?.call(context, snapshot.error ?? '',
-              snapshot.stackTrace ?? StackTrace.empty) ??
+                  snapshot.stackTrace ?? StackTrace.empty) ??
               const SliverToBoxAdapter();
         }
 
@@ -60,7 +60,7 @@ class FirestoreSliverGridView<T> extends StatelessWidget {
         return SliverGrid(
           gridDelegate: gridDelegate,
           delegate: SliverChildBuilderDelegate(
-                (context, index) {
+            (context, index) {
               if (snapshot.hasMore && index + 1 == snapshot.docs.length) {
                 // Tell FirestoreQueryBuilder to try to obtain more items.
                 // It is safe to call this function from within the build method.
