@@ -11,13 +11,13 @@ dependencies:
   flutter:
     sdk: flutter
 
-  firebase_ui_firestore: ^1.6.2
-  cloud_firestore: ^4.15.5
+  firebase_ui_firestore: ^1.7.0
+  cloud_firestore: ^5.4.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
