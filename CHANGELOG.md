@@ -1,3 +1,6 @@
+## ## 3.0.0
+* Upgraded firebase dependencies
+
 ## 2.1.0
 * Upgraded dependencies
 * Updated to dart 3
