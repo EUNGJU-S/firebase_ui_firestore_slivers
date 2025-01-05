@@ -66,7 +66,7 @@ class FirestoreSliverListView<T> extends StatelessWidget {
                 snapshot.fetchMore();
               }
 
-              return Padding(padding: EdgeInsets.only(bottom: snapshot.docs.length == index ? 100 : 0), child: itemBuilder(context, snapshot.docs[index]));
+              return Padding(padding: EdgeInsets.only(bottom: snapshot.docs.length == index + 1 ? 85 : 0), child: itemBuilder(context, snapshot.docs[index]));
             },
             childCount: snapshot.docs.length,
             addAutomaticKeepAlives: addAutomaticKeepAlives,
